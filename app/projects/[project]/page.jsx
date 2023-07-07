@@ -13,9 +13,17 @@ export default async function Project ({ params }) {
     
       console.log(project);
       return (
-        <main className="main-projects">
-          {project.name}
-          <div className="background" style={{backgroundImage: `url(${project.image ? project.image  : Logo})`}}></div>
+        <main className="main-project">
+           <section className='project-header'>
+          <div>
+            <h1>{project.name}</h1>
+          </div> 
+        </section>
+        <section className="project-image">
+          <div  style={{backgroundImage: `url(${project.image ? project.image  : Logo})`}}></div>
+        </section>  
+         
+
         </main >
       );
 }

@@ -207,8 +207,9 @@ _______________________________*/
   width: 110%;
   height: 100%;
   background-position: center;
-  background-image: url('../public/wp.jpg');
+  background-image: url('../public/cover.jpg');
   transition: 0.6s ease-in-out;
+  background-size: cover;
 }
 
 .section2:hover div {
@@ -285,7 +286,7 @@ ________________________*/
 }
 
 .preview-project-div {
-    width: 460px;
+    min-width: 460px;
 }
 
 .projects::-webkit-scrollbar {
@@ -307,18 +308,18 @@ ________________________*/
     color: black;
 }
 
-.projects > :nth-child(odd) {
+.projects > :nth-child(even) {
     height: 360px;
 }
 
-.projects > :nth-child(even) {
-    height: 460px;
+.projects > :nth-child(odd) {
+    height: 490px;
 }
 
 
 
 .project-div:hover a > div,
-.preview-project-div a > div {
+.preview-project-div:hover a > div {
     transform: translateX(-10%);
   }
   
@@ -453,18 +454,55 @@ ____________________________*/
     max-width: calc(33.33% - 20px);
 }
 
-.eCFOof {
+[data-ui="NextStudioLayout"]  {
     position: relative;
     z-index: 33;
 }
 
 
 
+.main-project {
+    padding: 150px 250px;
+    margin-bottom: 500px;
+    position: relative;
+    background-color: white;
+    z-index: 2;
+    min-height: 100vh;
+    padding-bottom: 300px;
+
+}
+
+.project-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    height: 40vh;
+}
 
 
 
+.project-header div {
+    width: 70%;
+    align-self: center;
+}
 
+.project-header h1 {
+    font-size: 4em;
+    font-weight: 400;
+}
 
+.project-image {
+    width: 100%;
+    height: 600px;
+}
+
+.project-image > div {
+    background-image: url(https://cdn.sanity.io/images/1wihf8wm/production/5f123b5…-1440x1440.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+}
 
 
 
@@ -472,7 +510,7 @@ ____________________________*/
 
 @media screen and (max-width: 764px) {
     header nav {
-        padding: 15px 20px 15px 20px;
+        padding: 20px 25px 15px 25px;
     }
     .ul-nav {
         gap: 40px;
@@ -494,6 +532,13 @@ ____________________________*/
     .main-projects {
         padding: 50px 20px;
         margin-bottom: 375px;
+        padding-bottom: 150px;
+    }
+
+    .main-project {
+        padding: 50px 0px;
+        margin-bottom: 375px;
+        padding-bottom: 150px;
     }
 
     .section {
@@ -501,14 +546,26 @@ ____________________________*/
     }
 
     .section h1,
-    .projects-header h1 {
+    .projects-header h1,
+    .project-header h1 {
         font-size: 2em
     }
 
+    .project-header {
+        padding: 0px 20px;
+        height: 30vh;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 300px;
+    }
+
     .section2 {
-        height: 25vh;
-        transform: translateX(20px);
+        height: 22vh;
+        transform: translateX(30px);
         width: 110%;
+        margin-bottom: 60px;
     }
 
     .section3 {
@@ -533,8 +590,7 @@ ____________________________*/
 
 
     .preview-project-div {
-        min-width: 80%;
-        width: 360px;
+        min-width: 100%;
     }
 
     .project-div > a,
