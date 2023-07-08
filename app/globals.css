@@ -574,6 +574,99 @@ ____________________________*/
 
 
 
+/*_______________________________
+
+
+    Contact page
+
+_______________________________*/
+
+
+.main-contact {
+    display: flex;
+    min-height: 100vh;
+    background-color: white;
+    padding: 250px 250px 150px 250px;
+    position: relative;
+    z-index: 2;
+    justify-content: center;;
+  }
+
+.main-contact section {
+    transform: translateX(-5%);
+}
+
+.contact-header {
+    margin-bottom: 100px;
+}
+
+.contact-header h1 {
+    font-size: 5em;
+}
+
+.contact-email {
+    font-size: 1.5em;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-email > p:first-child {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.658);
+}
+
+.contact-socials {
+    font-size: 1em;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.contact-socials > p:first-child {
+    color: rgb(0 0 0 / 32%);
+    font-weight: 700;
+}
+
+.contact-socials > p:last-child {
+    cursor: pointer;
+}
+
+.contact-hover span {
+    background-color: black;
+    height: 2px;
+    width: 0%;
+    display: block;
+    transition: 0.8s ease-in-out;
+    margin-top: 2px;
+}
+
+.contact-hover:hover  span {
+    width: 100%;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 764px) {
     header nav {
@@ -700,6 +793,15 @@ ____________________________*/
     .footer-logo-div {
         gap: 15px;
         font-size: 1.1em;
+    }
+    .main-contact {
+        padding: 100px 20px 50px 20px;
+    }
+    .contact-header {
+        margin-top: 50px;
+    }
+    .contact-header h1 {
+        font-size: 2em;
     }
       
 }
