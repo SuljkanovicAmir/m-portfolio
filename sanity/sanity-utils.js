@@ -10,7 +10,7 @@ export async function getProjects () {
             name,
             "slug": slug.current,
             "image": image.asset->url,
-            url,
+            url
         }`,
         { next: { revalidate: 40 } }
       )     

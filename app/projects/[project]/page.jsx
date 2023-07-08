@@ -11,7 +11,8 @@ export default async function Project ({ params }) {
         console.log("Project not found");
         return <div>Project not found</div>;
       }
-    
+      console.log(project)
+
       return (
         <main className="main-project">
           <section className='project-header'>
