@@ -13,7 +13,7 @@ export async function getProjects () {
             "image": image.asset->url,
             url,
         }`,
-        {next: {revalidate: 180}}, {cache: 'force-cache'}
+        {next: {revalidate: 40}}
     )
 
 }
@@ -31,7 +31,7 @@ export async function getProject(slug) {
             url
           }`,
           { slug },
-          {next: {revalidate: 180}}, {cache: 'force-cache'}
+          {next: {revalidate: 40}}
         );
     
         return result;
