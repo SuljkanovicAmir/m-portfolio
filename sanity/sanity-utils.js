@@ -13,12 +13,13 @@ export async function getProjects () {
             "image": image.asset->url,
             url,
         }`,
-        { next: { tags: ['projects'] } }
+        {next: {revalidate: 180}}, {cache: 'force-cache'}
     )
 
 }
 
 export async function getProject(slug) {
+
     try {
         const result = await createClient(clientConfig).fetch(
           groq`*[_type == "project" && slug.current == $slug][0]{
@@ -30,7 +31,7 @@ export async function getProject(slug) {
             url
           }`,
           { slug },
-          {next: {revalidate: 43200}}, {cache: 'force-cache'}
+          {next: {revalidate: 180}}, {cache: 'force-cache'}
         );
     
         return result;
