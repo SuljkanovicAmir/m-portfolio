@@ -13,7 +13,7 @@ export async function getProjects () {
             "image": image.asset->url,
             url,
         }`,
-        { next: { tags: ['collection'] } }
+        { next: { tags: ['projects'] } }
     )
 
 }
