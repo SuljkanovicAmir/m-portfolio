@@ -51,7 +51,7 @@ export default function() {
                       </Link>
                     </li>
                     <li className='list'>
-                      <Link onClick={handleClick} href="/search" className='search'>
+                      <Link onClick={handleClick} href="/contact" className='search'>
                         Contact
                       </Link>
                     </li>  

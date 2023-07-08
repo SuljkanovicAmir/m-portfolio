@@ -1,5 +1,6 @@
 import { getProject } from "@/sanity/sanity-utils";
 import Logo from '../../../public/logo_bg.svg'
+import Link from "next/link";
 
 export default async function Project ({ params }) {
 
@@ -11,19 +12,22 @@ export default async function Project ({ params }) {
         return <div>Project not found</div>;
       }
     
-      console.log(project);
       return (
         <main className="main-project">
-           <section className='project-header'>
-          <div>
-            <h1>{project.name}</h1>
-          </div> 
-        </section>
-        <section className="project-image">
-          <div  style={{backgroundImage: `url(${project.image ? project.image  : Logo})`}}></div>
-        </section>  
-         
-
+          <section className='project-header'>
+            <div>
+              <h1>{project.name}</h1>
+              <div className='section-hover'>
+                <Link href="/projects">
+                  Projects
+                </Link>
+                <span></span>
+              </div>     
+            </div> 
+          </section>
+          <section className="project-image">
+            <div  style={{backgroundImage: `url(${project.image ? project.image  : Logo})`}}></div>
+          </section>  
         </main >
       );
 }

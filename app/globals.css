@@ -7,7 +7,7 @@
 
 a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: black;
 }
 
 
@@ -59,6 +59,10 @@ header nav {
     flex-wrap: wrap;
     align-items: flex-end;
     backdrop-filter: blur(2px);
+}
+
+.list a {
+    color: white;
 }
 
 .list {
@@ -187,15 +191,37 @@ _______________________________*/
   justify-content: flex-start;
 }
 
-.section div {
-  width: 70%;
-  align-self: center;
+.section > div {
+    width: 70%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
 }
 
 .section h1 {
   font-size: 4em;
   font-weight: 400;
 }
+
+.section a {
+    color: black;
+}
+
+.section span,
+.project-header span {
+    background-color: black;
+    height: 2px;
+    width: 100%;
+    display: block;
+    transition: 1s ease-in-out;
+    margin-top: 2px;
+}
+
+.section-hover:hover  span {
+    width: 0%;
+} 
 
 .section2 {
   transform: translateX(300px);
@@ -216,9 +242,11 @@ _______________________________*/
   transform: translateX(-10%);
 }
 
-.section3 a {
-  color: black;
+
+.section3-div h1 {
+    font-weight: 200;
 }
+
 
 
 .section3 {
@@ -232,19 +260,20 @@ _______________________________*/
 .section3-div {
   border-top: 1px solid rgba(128, 128, 128, 0.452);
   display: flex;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
   width: 77%;
   padding-top: 20px;
 }
 
 .section-arrow {
-  height: 40px;
-  width: 40px;
+  height: 25px;
+  width: 25px;
 }
 
 .section3-div > a {
   margin-left: auto;
+  color: black;
 }
 
 
@@ -358,8 +387,10 @@ ________________________*/
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    padding: 100px;
+    font-size: 1.5em;
+    padding: 100px 100px 50px 100px;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .footer-container {
@@ -375,12 +406,21 @@ ________________________*/
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px;
+    gap: 30px;
+    font-size: 1.5em;
 }
+
+.footer-info-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
 
 .footer .logo {
     filter: invert(1);
-    height: 40px;
+    height: 60px;
     width: auto;
 }
 
@@ -388,10 +428,33 @@ ________________________*/
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-top: 10px;
 }
 
-.socials > img {
-    height: 30px !important;
+.social-img {
+    height: 25px;
+    filter: invert(1);
+    width: auto;
+    cursor: pointer;
+}
+.social-img.ig {
+    height: 22px;
+    
+}
+
+
+.bottom-bar {
+    color: #ffffff57;
+    font-size: 0.5em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.footer-email > p:first-child {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.685);
 }
 
 
@@ -481,13 +544,17 @@ ____________________________*/
 
 
 
-.project-header div {
+.project-header > div {
     width: 70%;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
 }
 
 .project-header h1 {
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: 400;
 }
 
@@ -526,9 +593,12 @@ ____________________________*/
 
 
 
+    .main {
+        padding: 50px 0px;
+        margin-bottom: 375px;
+        padding-bottom: 150px;
+    }
 
-
-    .main,
     .main-projects {
         padding: 50px 20px;
         margin-bottom: 375px;
@@ -543,12 +613,13 @@ ____________________________*/
 
     .section {
         height: 65vh;
+        padding: 0px 25px;
     }
 
     .section h1,
     .projects-header h1,
     .project-header h1 {
-        font-size: 2em
+        font-size: 2.2em
     }
 
     .project-header {
@@ -563,7 +634,7 @@ ____________________________*/
 
     .section2 {
         height: 22vh;
-        transform: translateX(30px);
+        transform: translateX(40px);
         width: 110%;
         margin-bottom: 60px;
     }
@@ -578,19 +649,22 @@ ____________________________*/
     .section3-div {
         gap: 10px;
         align-items: center;
-        width: 100%;
-        padding-top: 10px;
+        width: 90%;
+        padding-top: unset;
+        padding: 10px 5px 0px 5px;
         font-size: 14px;
+        margin: auto;
       }
 
     .section-arrow {
-        height: 30px;
-        width: 30px;
+        height: 16px;
+        width: 16px;
       }
 
 
+
     .preview-project-div {
-        min-width: 100%;
+        min-width: 80%;
     }
 
     .project-div > a,
@@ -598,11 +672,18 @@ ____________________________*/
         font-size: 1.15em;
     }
 
-
+    .section3 > .projects > .preview-project-div:first-child {
+        margin-left: 20px;
+    }
+    .section3 > .projects > .preview-project-div:last-child {
+        margin-right: 20px;
+    }
     
     .footer {
-        padding: 40px;
+        padding: 30px 40px;
         font-size: 20px;
+        height: 375px;
+        gap: 20px;
     }
     .footer-container {
         flex-direction: column;
@@ -612,8 +693,13 @@ ____________________________*/
         flex-basis: 100%;
         max-width: 100%;
     }
-    .footer {
-        height: 375px;
+
+    .footer .logo {
+        height: 35px;
+    }
+    .footer-logo-div {
+        gap: 15px;
+        font-size: 1.1em;
     }
       
 }

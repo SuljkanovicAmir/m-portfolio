@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from '../public/logo.png'
 import PreviewdProjects from './components/PreviewdProjects'
-
+import Arrow from '../public/arrow.svg'
 
 export default function Home() {
   return (
@@ -10,7 +9,13 @@ export default function Home() {
     <main className='main'>
         <section className='section'>
           <div>
-            <h1>Modern, environmentally conscious homes.</h1>
+            <h1>Transforming vision into breathtaking reality.</h1>
+            <div className='section-hover'>
+              <Link href="/projects">
+                Projects
+              </Link>
+              <span></span>
+            </div>     
           </div> 
         </section>
         <section className='section2'>
@@ -18,7 +23,7 @@ export default function Home() {
         </section>
         <section className='section3'>
             <div className='section3-div'>
-              <Image src={Logo}className='section-arrow' alt='arrow' width={100} height={100}/>
+              <Image src={Arrow}className='section-arrow' alt='arrow' unoptimized width={100} height={100}/>
               <h1>Projects</h1>
               <Link href="/projects">
                 View all
