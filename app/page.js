@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import PreviewdProjects from './components/PreviewdProjects'
+import PreviewedProjects from './components/PreviewedProjects'
 import Arrow from '../public/arrow.svg'
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
                 View all
               </Link>
             </div>
-            <PreviewdProjects />
+            <PreviewedProjects />
         </section>
     </main>
 </>
