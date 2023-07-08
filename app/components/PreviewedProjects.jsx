@@ -12,12 +12,10 @@ export default function PreviewedProjects() {
 
     const [results, setResults] = useState([]);
 
-    console.log(results)
-
     useEffect(() => {
         async function fetchProjects() {
             const projects = await getProjects()
-           console.log(projects)
+            console.log(projects)
             setResults(projects);
         }
         fetchProjects();

@@ -1,4 +1,6 @@
+"use client"
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from '../../public/logo_bg.svg'
 import { getProjects } from "@/sanity/sanity-utils";
@@ -6,8 +8,16 @@ import { getProjects } from "@/sanity/sanity-utils";
 
 export default async function Projects() {
 
-  const projects = await getProjects()
-  console.log(projects)
+  const [results, setResults] = useState([]);
+
+    useEffect(() => {
+        async function fetchProjects() {
+            const projects = await getProjects()
+            console.log(projects)
+            setResults(projects);
+        }
+        fetchProjects();
+      }, []);
 
   return (
     <main className="main-projects">
@@ -17,9 +27,9 @@ export default async function Projects() {
           </div> 
         </section>
         <div className="projects-container">
-          {projects.length > 0 && (
+          {results.length > 0 && (
                 <>
-                    {projects.map(data => (
+                    {results.map(data => (
                         <div className="project-div" key={data.id}>
                         <Link href={'projects/' + data.slug}> 
                             <div className="background" style={{backgroundImage: `url(${data.image ? data.image  : Logo})`}}></div>
