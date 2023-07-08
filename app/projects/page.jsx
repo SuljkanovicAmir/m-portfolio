@@ -6,7 +6,7 @@ import Logo from '../../public/logo_bg.svg'
 import { getProjects } from "@/sanity/sanity-utils";
 
 
-export default async function Projects() {
+export default function Projects() {
 
   const [results, setResults] = useState([]);
 
