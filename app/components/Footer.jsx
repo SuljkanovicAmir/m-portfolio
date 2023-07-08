@@ -26,7 +26,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div class="bottom-bar">
+            <div className="bottom-bar">
                 <p>&copy; 2023 Amir Suljkanović.</p>
                 <p>All rights reserved.</p>
             </div>

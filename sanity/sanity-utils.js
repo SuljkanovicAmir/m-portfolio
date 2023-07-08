@@ -3,7 +3,7 @@ import clientConfig from './config/client-config'
 
 export async function getProjects () {
   try {
-    const result =  createClient(clientConfig).fetch(
+    const result = await  createClient(clientConfig).fetch(
         groq`*[_type == "project"] {
             _id,
             _createdAt,
@@ -12,7 +12,7 @@ export async function getProjects () {
             "image": image.asset->url,
             url,
         }`,
-         { next: { revalidate: 60 } }
+        { next: { revalidate: 40 } }
       )     
       return result;
     } catch (error) {
@@ -34,7 +34,7 @@ export async function getProject(slug) {
             url
           }`,
           { slug },
-          {next: {revalidate: 40}}
+          { next: { revalidate: 40 } }
         );
     
         return result;
