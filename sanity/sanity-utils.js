@@ -12,7 +12,7 @@ export async function getProjects () {
             "image": image.asset->url,
             url
         }`,
-        { next: { revalidate: 180 } }
+        { next: { revalidate: 600 } }
       )     
       return result;
     } catch (error) {
@@ -34,7 +34,7 @@ export async function getProject(slug) {
             url
           }`,
           { slug },
-          { next: { revalidate: 180 } }
+          { next: { revalidate: 600 } }
         );
     
         return result;

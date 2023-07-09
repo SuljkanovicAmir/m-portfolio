@@ -25,9 +25,12 @@ export default function Home() {
             <div className='section3-div'>
               <Image src={Arrow}className='section-arrow' alt='arrow' unoptimized width={100} height={100}/>
               <h1>Projects</h1>
-              <Link href="/projects">
-                View all
-              </Link>
+              <div className='section-hover'>
+                <Link href="/projects">
+                  View all
+                </Link>
+                <span></span>
+              </div>
             </div>
             <PreviewedProjects />
         </section>
