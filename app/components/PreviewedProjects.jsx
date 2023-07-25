@@ -26,9 +26,9 @@ export default function PreviewedProjects() {
             {results.length > 0 && (
                 <>
                     {results.map(data => (
-                        <div className="preview-project-div" key={data.id}>
+                        <div className="preview-project-div" key={data._id}>
                         <Link href={'projects/' + data.slug}> 
-                            <div className="background" style={{backgroundImage: `url(${data.image ? data.image  : Logo})`}}></div>
+                            <div className="background" style={{backgroundImage: `url(${data.images ? data.images[0]  : Logo})`}}></div>
                             <p>{data.name}</p>
                         </Link>
                     </div>
@@ -38,3 +38,5 @@ export default function PreviewedProjects() {
         </div>
     );
 }
+
+

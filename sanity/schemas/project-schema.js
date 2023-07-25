@@ -14,31 +14,30 @@ const project = {
         title: "Slug",
         options: {source: 'name'}
       },
-        {
-                name: "image",
-                type: "image",
-                title: "Image",
-                options: {hotspot: true},
-                fields: [ 
-                  {
-                    name:'alt',
-                    title: 'Alt', 
-                    type: 'string'
-                  }
-                ]
-              },
-           
       {
-        name: "url",
-        type: "url",
-        title: "URL"
+        name: 'images',
+        title: 'Project images',
+        type: 'array',
+        of: [
+          {
+            type: 'image',
+            options: { hotspot: true},
+            fields: [ 
+              {
+                name:'alt',
+                title: 'Alt', 
+                type: 'string'
+              }
+            ]
+          },
+        ],
+        description: 'Multiple images for the project',
       },
       {
         name: "description",
         type: "text",
         title: "Description"
       },
-
       {
         name: "details",
         type: "object",

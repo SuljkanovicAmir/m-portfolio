@@ -10,12 +10,14 @@ export default function Home() {
         <section className='section'>
           <div>
             <h1>Transforming vision into breathtaking reality.</h1>
-            <div className='section-hover'>
-              <Link href="/projects">
-                Projects
-              </Link>
-              <span></span>
-            </div>     
+            <Link href="/projects" className='section-hover underline'>
+                <div className="flip-wrap">
+                  <div className="flip">
+                      <span>Projects</span>
+                      <span>Projects</span>
+                  </div>
+                </div>
+              </Link>  
           </div> 
         </section>
         <section className='section2'>

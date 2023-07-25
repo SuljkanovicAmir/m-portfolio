@@ -32,7 +32,7 @@ export default function Projects() {
                     {results.map(data => (
                         <div className="project-div" key={data.id}>
                         <Link href={'projects/' + data.slug}> 
-                            <div className="background" style={{backgroundImage: `url(${data.image ? data.image  : Logo})`}}></div>
+                            <div className="background" style={{backgroundImage: `url(${data.images ? data.images[0]  : Logo})`}}></div>
                             <p>{data.name}</p>
                         </Link>
                     </div>

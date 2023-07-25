@@ -9,10 +9,10 @@ export async function getProjects () {
             _createdAt,
             name,
             "slug": slug.current,
-            "image": image.asset->url,
-            url
+            url,
+            "images": images[].asset->url
         }`,
-        { next: { revalidate: 600 } }
+        { next: { revalidate: 6000 } }
       )     
       return result;
     } catch (error) {
@@ -30,11 +30,11 @@ export async function getProject(slug) {
             _createdAt,
             name,
             "slug": slug.current,
-            "image": image.asset->url,
-            url
+            url,
+            "images": images[].asset->url
           }`,
           { slug },
-          { next: { revalidate: 600 } }
+          { next: { revalidate: 6000 } }
         );
     
         return result;
