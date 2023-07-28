@@ -53,13 +53,14 @@ const ProjectItem = ({ data }) => {
   const [ref, inView] = useInView({
     rootMargin: '-100px 0px',
   });
+  
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
-      exit={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 30 }}
+      exit={{ opacity: 0, y: 30 }}
       transition={{ duration: 0.7 }}
       className="project-div"
       key={data.id}

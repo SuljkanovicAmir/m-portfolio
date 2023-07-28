@@ -12,7 +12,6 @@ export default function Footer() {
             <div className="footer-container">
                 <div className="footer-logo-div">
                     <Image src={Logo} className=' logo' alt='arrow' width={100} height={100}/>
-                    Building a better future, <br></br> together.
                 </div>
                 <div className="footer-info-div">
                     <div className="footer-email">

@@ -17,7 +17,7 @@ export default function Home() {
   const isMobileScreen = useIsMobileScreen(); // Custom function to check if it's a mobile screen
 
   const section2Animation = {
-    hidden: { x: isMobileScreen ? '60%' : '110%', opacity: 0 },
+    hidden: { x: isMobileScreen ? '40px' : '110%', opacity: isMobileScreen ? 1 : 0 },
     visible: { x: isMobileScreen ? '40px' : '300px', opacity: 1 },
   };
 
