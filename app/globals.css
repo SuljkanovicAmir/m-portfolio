@@ -297,11 +297,11 @@ a.underline:after {
 
 
 .section3 {
-  width: 130%;
-  height: 80vh;
+  width: 100%;
+  min-height: 80vh;
+  height: 100%;
   padding-top: 20px;
   z-index: 17;
-  transform: translateX(210px);
 }
 
 .section3-div {
@@ -309,7 +309,7 @@ a.underline:after {
   display: flex;
   gap: 20px;
   align-items: center;
-  width: 77%;
+  width: 100%;
   padding-top: 20px;
 }
 
@@ -324,10 +324,82 @@ a.underline:after {
   align-self: flex-start;
 }
 
+.back-to-projects {
+    height: 200px;
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+}
 
 
+.loading-screen {
+    position: fixed;
+    background: black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    z-index: 44444;
+    color: white;
+    opacity: 1; /* Start with opacity 1 */
+    transition: opacity 0.5s ease;
+}
+
+.loading-screen > div {
+    position: relative;
+    opacity: 1 !important;
+}
+
+.loading-screen :not(.isLoading) {
+    opacity: 0;
+}
+
+.loading-image {
+    filter: invert(1) ;
+    opacity: 1 !important;
+    animation: 2s bounce ease infinite;
+}
 
 
+.shadow {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0%;
+    background-color: #ffffff;
+    opacity: 0.2;
+    transform-origin: -50% -50%;
+    animation: 2s pulsate ease infinite;
+    z-index: -1;
+}
+
+@keyframes bounce {  
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.5);
+        opacity: 0.4;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
 
 
 @keyframes scrolldown {
@@ -362,9 +434,6 @@ ________________________*/
     height: 75%;
 }
 
-.preview-project-div {
-    min-width: 460px;
-}
 
 .projects::-webkit-scrollbar {
     display: none;
@@ -385,13 +454,20 @@ ________________________*/
     color: black;
 }
 
+
 .projects > :nth-child(even) {
-    height: 360px;
+    height: 340px;
 }
 
 .projects > :nth-child(odd) {
-    height: 490px;
+    height: 420px;
 }
+
+
+.preview-project-div  {
+    flex: 1;
+}
+
 
 
 
@@ -410,6 +486,11 @@ ________________________*/
     height: 100%;
     transition: 0.4s ease-in-out;
 }
+
+
+
+
+
 
 
 
@@ -790,9 +871,25 @@ _______________________________*/
 
 
 
+  .carousel.is-fullscreen .carousel-cell {
+    height: 100%;
+  }
 
 
-
+.full-image {
+    height: 5%;
+    width: 10%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #00000098;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    backdrop-filter: blur(1px);
+    font-size: 14px;
+}
 
 
 
@@ -1028,7 +1125,8 @@ _______________________________*/
 
     .section3 {
         width: 100%;
-        height: 93vh;
+        min-height: 93vh;
+        height: 100%;
         padding-top: 20px;
         transform: unset;
     }
@@ -1055,10 +1153,10 @@ _______________________________*/
       }
 
 
-
-    .preview-project-div {
-        min-width: 80%;
+    .preview-project-div  {
+        min-width: 80%
     }
+    
 
     .project-div > a,
     .preview-project-div > a {
@@ -1149,7 +1247,11 @@ _______________________________*/
     .flickity-button {
         display: none;
     }
+    .full-image {
+        width: 25%;
+        height: 12%;
+        font-size: 12px;
+    }
     
-    
-      
+
 }

@@ -25,7 +25,7 @@ export default function PreviewedProjects() {
         <div className="projects">
             {results.length > 0 && (
                 <>
-                    {results.map(data => (
+                    {results.slice(0, 3).map(data => (
                         <div className="preview-project-div" key={data._id}>
                         <Link href={'projects/' + data.slug}> 
                             <div className="background" style={{backgroundImage: `url(${data.images ? data.images[0]  : Logo})`}}></div>
