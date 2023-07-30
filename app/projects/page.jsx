@@ -19,7 +19,7 @@ export default function Projects() {
             const projects = await getProjects()
             console.log(projects)
             setResults(projects);
-            setTimeout(() => setIsLoading(false), 400);
+            setTimeout(() => setIsLoading(false), 600);
         }
         fetchProjects();
       }, []);

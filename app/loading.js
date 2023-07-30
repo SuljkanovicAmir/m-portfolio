@@ -11,7 +11,7 @@ export default function Loading() {
                     initial={{ opacity: 1, translateY: 0, translateX: 0 }}
                     animate={{ opacity: 1, translateY: 0 , translateX: 0 }}
                     exit={{ opacity: 1, translateY: '-100%', translateX: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.5 }}
                     onAnimationStart={() => console.log('Animation is starting')} // Add this line to check if the animation is starting
                     onAnimationComplete={() => console.log('Animation is complete')} // Add this line to check if the animation is complete
                 >

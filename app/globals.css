@@ -48,7 +48,7 @@ header nav {
     top: 0;
     z-index: 5;
     width: 100%;
-    transition: 0s 0.8s;
+    transition: 0s 0.6s;
     display: flex;
     font-size: 4.2rem;
     font-weight: 900;
@@ -126,7 +126,7 @@ header nav {
   }
   
   .anim-trans {
-    animation: anim 1.5s ease-out;
+    animation: anim 1.2s ease-out;
 }
   
 
@@ -161,23 +161,6 @@ _______________________________*/
   margin-bottom: 280px;
   position: relative;
 }
-
-.scroll {
-  width: 2.5em; 
-  height: 2.5em; 
-  background-color: transparent;     
-  bottom: 35px; 
-  position: absolute;
-  border-width: 0 0.25em 0.25em 0; 
-  border-style: solid; 
-  border-color: rgb(255, 255, 255); 
-  animation: scrolldown 1.3s ease-in-out infinite 0.15s;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  cursor: pointer;
-  z-index: 1;
-}
-
 
 .section,
 .section2,
