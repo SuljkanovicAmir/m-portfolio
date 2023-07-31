@@ -18,8 +18,8 @@ export default function Home() {
   const isMobileScreen = useIsMobileScreen(); // Custom function to check if it's a mobile screen
 
   const section2Animation = {
-    hidden: { x: isMobileScreen ? '40px' : '110%', opacity: isMobileScreen ? 1 : 0 },
-    visible: { x: isMobileScreen ? '40px' : '300px', opacity: 1 },
+    hidden: { x: isMobileScreen ? '10%' : '110%', opacity: isMobileScreen ? 1 : 0 },
+    visible: { x: isMobileScreen ? '10%' : '300px', opacity: 1 },
   };
 
 
@@ -34,10 +34,10 @@ export default function Home() {
               transition={{delay: 0, duration: 1}}>
               Transforming vision into breathtaking reality.
             </motion.h1>
-            <motion.div initial={{ opacity: 0, y: '300px'}}
+            <motion.div initial={{ opacity: 0, y: '200px'}}
               animate={{ opacity: 1,  y: '0'}}
-              exit={{ opacity: 0,  y: '300px' }}
-              transition={{delay: 0.2, duration: 0.7}}>
+              exit={{ opacity: 0,  y: '200px' }}
+              transition={{delay: 0.2, duration: 0.8}}>
             <Link href="/projects" className='section-hover underline'>
                 <motion.div className="flip-wrap">
                   <div className="flip">

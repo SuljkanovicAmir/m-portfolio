@@ -175,7 +175,7 @@ _______________________________*/
 }
 
 .section > div {
-    width: 70%;
+    width: clamp(650px, 70%, 700px);
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -184,7 +184,7 @@ _______________________________*/
 }
 
 .section h1 {
-  font-size: 4em;
+  font-size: clamp(3rem, 4.5vw, 4rem);
   font-weight: 400;
 }
 
@@ -1043,7 +1043,7 @@ _______________________________*/
 
 
 
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 768px) {
     header nav {
         padding: 20px 25px 15px 25px;
     }
@@ -1101,7 +1101,7 @@ _______________________________*/
 
     .section2 {
         height: 22vh;
-        transform: translateX(40px);
+        transform: translateX(10%);
         width: 110%;
         margin-bottom: 60px;
     }
@@ -1238,4 +1238,26 @@ _______________________________*/
     }
     
 
+}
+
+
+@media (min-width: 769px)  and (max-width: 1280px) {
+    header nav {
+        padding: 60px 60px 20px 60px;
+    }
+    .main,
+    .main-about,
+    .main-projects,
+    .main-contact {
+        padding: 130px 110px;
+    }
+    .section2 {
+        height: 50vh !important;
+        width: 105%;
+        transform: translateX(10%) translateZ(0px) !important;
+    }
+    .about-header,
+    .contact-header {
+        margin-top: 100px;
+    }
 }
