@@ -11,6 +11,28 @@ a {
 }
 
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 11px;
+    border: 2px solid #ffffff;
+  }
+
 
 /*_____________________________
 
@@ -158,9 +180,10 @@ _______________________________*/
   overflow-x: hidden;
   gap: 80px;
   z-index: 2;
-  margin-bottom: 280px;
   position: relative;
 }
+
+
 
 .section,
 .section2,
@@ -172,6 +195,7 @@ _______________________________*/
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  padding-left: 10px;
 }
 
 .section > div {
@@ -193,13 +217,6 @@ _______________________________*/
 }
 
 
-.section3 span {
-    background-color: black;
-    height: 1px;
-    width: 100%;
-    display: block;
-    transition: 1s ease-in-out;
-}
 
 
 a.underline .flip-wrap {
@@ -254,22 +271,25 @@ a.underline:after {
 }
 
 .section2 {
-  transform: translateX(300px);
+  transform: translateX(400px);
   width: 100%;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;   
+   height: 65vh;
+
 }
 
 .section2 div {
-  width: 110%;
+  width: 101%;
   height: 100%;
   background-position: center;
   background-image: url('../public/cover.jpg');
-  transition: 0.6s ease-in-out;
+  transition: 1s ease-in-out;
   background-size: cover;
 }
 
 .section2:hover div {
-  transform: translateX(-10%);
+  transform: translateX(-2%);
 }
 
 
@@ -283,17 +303,33 @@ a.underline:after {
   width: 100%;
   min-height: 80vh;
   height: 100%;
-  padding-top: 20px;
+  padding-top: 120px;
   z-index: 17;
+  display: flex;
+  flex-direction: column;
 }
 
 .section3-div {
-  border-top: 1px solid rgba(128, 128, 128, 0.452);
   display: flex;
   gap: 20px;
   align-items: center;
   width: 100%;
   padding-top: 20px;
+  transition: 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.section3 .span-div {
+    width: 100px;
+    height: 2px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.section3 .span-div > span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: black;
 }
 
 .section-arrow {
@@ -415,6 +451,7 @@ ________________________*/
 }
 
 
+
 .projects::-webkit-scrollbar {
     display: none;
   }
@@ -450,6 +487,10 @@ ________________________*/
     flex: 1;
 }
 
+.projects-link {
+    align-self: center;
+    margin-top: 100px;
+}
 
 
 
@@ -486,10 +527,10 @@ ________________________*/
 
 
 .footer {
-    height: 280px;
-    background-color: black;
-    width: 100%;
-    z-index: 1;
+    height: 130px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 65px;
+    z-index: 2;
     position: fixed;
     left: 0;
     right: 0;
@@ -499,7 +540,6 @@ ________________________*/
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-    padding: 50px 100px;
     flex-direction: column;
     gap: 30px;
 }
@@ -507,52 +547,29 @@ ________________________*/
 .footer-container {
     display: flex;
     justify-content: space-around;
-    width: 66%;
     height: 100%;
     align-items: center;
-    flex-direction: row-reverse;
-}
-
-.footer-logo-div {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    font-size: 1.5em;
-}
-
-.footer-info-div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 0.9em;
 }
 
 
-.footer .logo {
-    filter: invert(1);
-    height: 60px;
-    width: auto;
-}
 
 .socials {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 10px;
+    flex-direction: column;
 }
 
 .social-img {
-    height: 25px;
-    filter: invert(1);
+    height: 30px;
     width: auto;
     cursor: pointer;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 50%;
 }
-.social-img.ig {
-    height: 22px;
-    
-}
+
 
 
 .bottom-bar {
@@ -579,7 +596,6 @@ ____________________________*/
 
 .main-projects {
     padding: 150px 250px;
-    margin-bottom: 280px;
     position: relative;
     background-color: white;
     z-index: 2;
@@ -638,7 +654,6 @@ ____________________________*/
 
 
 .main-project {
-    margin-bottom: 280px;
     position: relative;
     background-color: white;
     z-index: 2;
@@ -982,7 +997,6 @@ _______________________________*/
     position: relative;
     z-index: 2;
     justify-content: center;;
-    margin-bottom: 280px;
 }
 
 .main-about section {
@@ -1062,25 +1076,22 @@ _______________________________*/
 
     .main {
         padding: 50px 0px;
-        margin-bottom: 280px;
-        padding-bottom: 150px;
+        padding-bottom: 100px;
     }
 
     .main-projects {
         padding: 50px 20px;
-        margin-bottom: 280px;
-        padding-bottom: 150px;
+        padding-bottom: 100px;
     }
 
     .main-project {
         padding: 50px 0px;
-        margin-bottom: 280px;
-        padding-bottom: 150px;
+        padding-bottom: 100px;
     }
 
     .section {
         height: 65vh;
-        padding: 0px 25px;
+        padding: 0px 20px 0px 35px;
     }
 
     .section h1,
@@ -1149,7 +1160,7 @@ _______________________________*/
     .section3 > .projects > .preview-project-div:first-child {
         margin-left: 20px;
     }
-    .section3 > .projects > .preview-project-div:last-child {
+    .section3 > .projects >  .preview-project-div:last-child {
         margin-right: 20px;
     }
     
@@ -1236,6 +1247,16 @@ _______________________________*/
         height: 12%;
         font-size: 12px;
     }
+    .footer {
+        display: none;
+    }
+    .section .socials {
+        flex-direction: row;
+        margin-top: 0;
+    }
+    .section3 .span-div {
+        width: 50px;
+    }
     
 
 }
@@ -1254,10 +1275,11 @@ _______________________________*/
     .section2 {
         height: 50vh !important;
         width: 105%;
-        transform: translateX(10%) translateZ(0px) !important;
+        transform: translateX(16%) translateZ(0px) !important;
     }
     .about-header,
     .contact-header {
         margin-top: 100px;
     }
+    
 }

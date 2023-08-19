@@ -1,4 +1,23 @@
+"use client"
+
+import { useEffect, useState } from "react";
+import Loading from "../loading";
+
+
 export default function() {
+    
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  useEffect(() => {
+        setTimeout(() => setIsLoading(false), 600);
+  }, []);
+
+  if (isLoading) {
+    return <Loading /> 
+  }
+
+
     return (
         <main className="main-about">
             <section>
