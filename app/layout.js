@@ -16,8 +16,8 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content="Mersim Suljkanovic - Portfolio" />
         <meta property="og:description" content="Mersim Suljkanovic - Portfolio Website" />
         <meta name="author" content="Amir Suljkanovic" />
-        <meta property="og:type" content="Portoflio Website" />
-        <meta property="og:image" content="https://i.ibb.co/17QhhTH/image01.png" />
+        <meta property="og:type" content="Website" />
+        <meta property="og:image" content="https://i.imgur.com/hVQBiQI.png" />
 
       </head>
       <body className={poppins.className}>
