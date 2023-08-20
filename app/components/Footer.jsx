@@ -1,7 +1,4 @@
 import Image from "next/image";
-import Logo from "../../public/logo.png";
-import Instagram from "../../public/instagram.svg";
-import Linkedin from "../../public/linkd.svg";
 import FB from "../../public/fb.svg";
 import EmailIcon from "../../public/email.svg";
 import Link from "next/link";

@@ -4,7 +4,6 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 import Loading from './loading'
 import { Suspense } from 'react'
-
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 
 export const metadata = {
@@ -17,9 +16,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta property="og:title" content="Mersim Suljkanovic - Portfolio" />
-        <meta property="og:description" content="Mersim Suljkanovic" />
+        <meta property="og:description" content="Mersim Suljkanovic - Portfolio Website" />
         <meta name="author" content="Amir Suljkanovic" />
         <meta property="og:type" content="Portoflio Website" />
+        <meta property="og:image" content="../public/image01.png" />
 
       </head>
       <body className={poppins.className}>
