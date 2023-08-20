@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <meta name="author" content="Amir Suljkanovic" />
         <meta property="og:type" content="Website" />
         <meta property="og:image" content="https://i.imgur.com/hVQBiQI.png" />
-
+        <meta name="google-site-verification" content="Ii2w0-XK6MOqoHCar_Vi-JK83Q8Lz0ssTdObBueUQI8" />
       </head>
       <body className={poppins.className}>
         <Header />
