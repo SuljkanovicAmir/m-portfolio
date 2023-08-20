@@ -15,6 +15,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:title" content="Mersim Suljkanovic - Portfolio" />
+        <meta property="og:description" content="Mersim Suljkanovic" />
+        <meta name="author" content="Amir Suljkanovic" />
+        <meta property="og:type" content="Portoflio Website" />
+
+      </head>
       <body className={poppins.className}>
         <Header />
           <Suspense fallback={<Loading />}>{children}</Suspense>
