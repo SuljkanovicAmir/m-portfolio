@@ -93,10 +93,3 @@ export default function Project({ params }) {
     </>
   );
 }
-
-/* 
-
-Sa Framer Motion dodati opacity na Flikity dok se ne loada 
-Također dodati Framer motion na druge componente 
-Srediti responsivitiy
-*/
