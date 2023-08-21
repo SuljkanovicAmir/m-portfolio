@@ -34,6 +34,17 @@ a {
   }
 
 
+  input,
+img,
+textarea,
+button,
+select,
+a,
+div {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
 /*_____________________________
 
 
