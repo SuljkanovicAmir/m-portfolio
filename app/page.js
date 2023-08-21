@@ -11,9 +11,7 @@ import EmailIcon from "../public/email.svg";
 import Loading from "./loading";
 
 export default function Home() {
-
   const [isLoading, setIsLoading] = useState(true);
-
 
   const [section2Ref, inViewSection2] = useInView({
     triggerOnce: true,
@@ -36,12 +34,11 @@ export default function Home() {
   };
 
   useEffect(() => {
-      setTimeout(() => setIsLoading(false), 600);
+    setTimeout(() => setIsLoading(false), 600);
   }, []);
 
-
   if (isLoading) {
-    return <Loading /> 
+    return <Loading />;
   }
 
   return (
@@ -65,22 +62,29 @@ export default function Home() {
             >
               {isMobileScreen ? (
                 <div className="socials">
-                  <Image
-                    src={FB}
-                    unoptimized
-                    className="social-img"
-                    alt="arrow"
-                    width={100}
-                    height={100}
-                  />
-                  <Image
-                    src={EmailIcon}
-                    unoptimized
-                    className="social-img"
-                    alt="arrow"
-                    width={100}
-                    height={100}
-                  />
+                  <Link
+                    href="https://www.facebook.com/mersim.suljkanovic.73"
+                    target="_blank"
+                  >
+                    <Image
+                      src={FB}
+                      unoptimized
+                      className="social-img"
+                      alt="arrow"
+                      width={100}
+                      height={100}
+                    />
+                  </Link>
+                  <Link href="mailto:example@gmail.com" target="_blank">
+                    <Image
+                      src={EmailIcon}
+                      unoptimized
+                      className="social-img"
+                      alt="arrow"
+                      width={100}
+                      height={100}
+                    />
+                  </Link>
                 </div>
               ) : (
                 <Link href="/contact" className="section-hover underline">

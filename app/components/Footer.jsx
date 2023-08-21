@@ -8,25 +8,29 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="socials">
-          <Link href="https://www.facebook.com/mersim.suljkanovic.73" target='_blank'>
-          <Image
-            src={FB}
-            unoptimized
-            className="social-img"
-            alt="arrow"
-            width={100}
-            height={100}
-          />
+          <Link
+            href="https://www.facebook.com/mersim.suljkanovic.73"
+            target="_blank"
+          >
+            <Image
+              src={FB}
+              unoptimized
+              className="social-img"
+              alt="arrow"
+              width={100}
+              height={100}
+            />
           </Link>
-          
-          <Image
-            src={EmailIcon}
-            unoptimized
-            className="social-img"
-            alt="arrow"
-            width={100}
-            height={100}
-          />
+          <Link href="mailto:example@gmail.com" target="_blank">
+            <Image
+              src={EmailIcon}
+              unoptimized
+              className="social-img"
+              alt="arrow"
+              width={100}
+              height={100}
+            />
+          </Link>
         </div>
       </div>
     </footer>
